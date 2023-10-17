@@ -1,0 +1,304 @@
+<div class="customProductPage">
+  <div class="search upperMargin text-center">
+    <div class="search-bar text-center">
+      <input
+        class="customSearch"
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchText"
+        (input)="searchProducts()"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <ng-container *ngFor="let product of filteredProducts; let i = index">
+      <div class="col-3">
+        <div class="card customFeature">
+          <div class="customImg">
+            <img
+              src="{{ product.img }}"
+              class="card-img-top"
+              alt="Product Image"
+            />
+          </div>
+          <hr />
+
+          <div class="card-body">
+            <h5 class="card-title">{{ product.product }}</h5>
+            <div class="price-box">
+              <p class="card-text customPrice">Price:</p>
+              <span class="price-amount">{{ product.price }}</span>
+            </div>
+            <div class="quantity-container">
+              <label for="quantity" class="customLabel">Quantity</label>
+              <button class="qntBtn" (click)="decQnt(product)">
+                <i class="fa fa-minus"></i>
+              </button>
+              <span class="mx-2">{{ product.qnt }}</span>
+              <button class="qntBtn" (click)="incQnt(product)">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+            <div class="button-container">
+              <button
+                class="btn btn-primary btn-sm"
+                type="button"
+                id="add-to-cart"
+                (click)="addToCart(product)"
+              >
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+              <button
+                class="btn btn-secondary btn-sm"
+                type="button"
+                id="save-for-later"
+                (click)="saveForLater(product)"
+              >
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="(i + 1) % 4 === 0" class="w-100"></div>
+    </ng-container>
+  </div>
+  <br /><br />
+  <div class="customProductPage">
+    <div class="container">
+      <div class="row text-center customCategoryImg">
+        <h2 class="my-3">Categories</h2>
+        <div class="col-4 text-center">
+          <img
+            class="customScroll mx-4"
+            src="assets/images/milkP.avif"
+            alt="Milk Products"
+            (click)="scrollToSection('milkProducts')"
+            style="cursor: pointer"
+          />
+          <h3>Milk Products</h3>
+        </div>
+        <div class="col-4 text-center">
+          <img
+            class="customScroll mx-4"
+            src="assets/images/breadP.avif"
+            alt="Curd Products"
+            (click)="scrollToSection('breadProducts')"
+            style="cursor: pointer"
+          />
+          <h3>Bread Products</h3>
+        </div>
+        <div class="col-4 text-center">
+          <img
+            class="customScroll mx-4"
+            src="assets/images/curpP.avif"
+            alt="Bread Products"
+            (click)="scrollToSection('curdProducts')"
+            style="cursor: pointer"
+          />
+          <h3>Curd Products</h3>
+        </div>
+      </div>
+
+      <div class="container customMarginTop">
+        <div
+          id="milkProducts"
+          class="row justify-content-center customCategories"
+        >
+          <img
+            class="customProductImg"
+            src="assets/images/milkProduct.png"
+            alt=""
+          />
+        </div>
+        <div class="row">
+          <ng-container *ngFor="let product of productArr">
+            <div class="col" *ngIf="product.cat === 'milk'">
+              <div class="card customFeature">
+                <div class="customImg">
+                  <img
+                    src="{{ product.img }}"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                </div>
+                <hr />
+
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.product }}</h5>
+                  <div class="price-box">
+                    <p class="card-text customPrice">Price:</p>
+                    <span class="price-amount">{{ product.price }}</span>
+                  </div>
+                  <div class="quantity-container">
+                    <label for="quantity" class="customLabel">Quantity </label>
+
+                    <button class="qntBtn" (click)="decQnt(product)">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <span class="mx-2">{{ product.qnt }}</span>
+
+                    <button class="qntBtn" (click)="incQnt(product)">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                  <div class="button-container">
+                    <button
+                      class="btn btn-primary btn-sm"
+                      type="button"
+                      id="add-to-cart"
+                      (click)="addToCart(product)"
+                    >
+                      Add to Cart <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary btn-sm"
+                      type="button"
+                      id="save-for-later"
+                      (click)="saveForLater(product)"
+                    >
+                      <i class="fas fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <br /><br />
+
+        <div
+          id="curdProducts"
+          class="row justify-content-center customCategories"
+        >
+          <img
+            class="customProductImg"
+            src="assets/images/CurdProduct.png"
+            alt=""
+          />
+        </div>
+        <div class="row">
+          <ng-container *ngFor="let product of productArr">
+            <div class="col" *ngIf="product.cat === 'curd'">
+              <div class="card customFeature">
+                <div class="customImg">
+                  <img
+                    src="{{ product.img }}"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                </div>
+                <hr />
+
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.product }}</h5>
+                  <div class="price-box">
+                    <p class="card-text customPrice">Price:</p>
+                    <span class="price-amount">{{ product.price }}</span>
+                  </div>
+                  <div class="quantity-container">
+                    <label for="quantity" class="customLabel">Quantity:</label>
+                    <button class="qntBtn" (click)="decQnt(product)">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <span class="mx-2">{{ product.qnt }}</span>
+
+                    <button class="qntBtn" (click)="incQnt(product)">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                  <div class="button-container">
+                    <button
+                      class="btn btn-primary btn-sm"
+                      type="button"
+                      id="add-to-cart"
+                      (click)="addToCart(product)"
+                    >
+                      Add to Cart <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary btn-sm"
+                      type="button"
+                      id="save-for-later"
+                      (click)="saveForLater(product)"
+                    >
+                      <i class="fas fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <br /><br />
+
+        <div
+          id="breadProducts"
+          class="row justify-content-center customCategories"
+        >
+          <img
+            class="customProductImg"
+            src="assets/images/breadProduct.png"
+            alt=""
+          />
+        </div>
+        <div class="row">
+          <ng-container *ngFor="let product of productArr">
+            <div class="col" *ngIf="product.cat === 'bread'">
+              <div class="card customFeature">
+                <div class="customImg">
+                  <img
+                    src="{{ product.img }}"
+                    class="card-img-top"
+                    alt="Product Image"
+                  />
+                </div>
+                <hr />
+
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.product }}</h5>
+                  <div class="price-box">
+                    <p class="card-text customPrice">Price:</p>
+                    <span class="price-amount">{{ product.price }}</span>
+                  </div>
+                  <div class="quantity-container">
+                    <label for="quantity" class="customLabel">Quantity:</label>
+                    <button class="qntBtn" (click)="decQnt(product)">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <span class="mx-2">{{ product.qnt }}</span>
+
+                    <button class="qntBtn" (click)="incQnt(product)">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                  <div class="button-container">
+                    <button
+                      class="btn btn-primary btn-sm"
+                      type="button"
+                      id="add-to-cart"
+                      (click)="addToCart(product)"
+                    >
+                      Add to Cart <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button
+                      class="btn btn-secondary btn-sm"
+                      type="button"
+                      id="save-for-later"
+                      (click)="saveForLater(product)"
+                    >
+                      <i class="fas fa-bookmark"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

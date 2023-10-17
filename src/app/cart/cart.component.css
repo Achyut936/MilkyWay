@@ -1,0 +1,26 @@
+.container {
+  margin-top: 70px;
+}
+.productImg {
+  height: 180px !important;
+}
+
+.cart-item {
+  margin-bottom: 6%;
+}
+.customClear {
+  margin-right: 10px;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.qntBtn {
+  border: none;
+
+  border-radius: 10px;
+}

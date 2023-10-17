@@ -1,0 +1,121 @@
+.customFeature {
+  width: 170px;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+  margin: 15px 0;
+  position: relative;
+  height: 430px;
+}
+
+.customImg {
+  height: 215px !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.price-amount {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.customMarginTop {
+  margin-top: 60px;
+}
+
+.customCategories {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.customPrice {
+  margin-top: 10px;
+}
+
+.customProductImg {
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 10px;
+  height: 250px !important;
+}
+
+.customCategoryImg {
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 10px;
+  height: 270px !important;
+  background-color: #407fb4;
+}
+
+.customScroll {
+  height: 150px;
+  border-radius: 75px;
+}
+
+.upperMargin {
+  margin-top: 80px;
+}
+
+.customSearch {
+  margin-top: 10px;
+  border-radius: 10px;
+  border-color: black;
+}
+
+.customCaption {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInRight;
+}
+
+.customCard {
+  width: 170px;
+  text-align: center;
+  padding: 18px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  margin: 15px 1pc; 
+  height: 220px;
+}
+
+.customFeaturedimg {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card-img-top {
+  display: block;
+  margin: 0 auto;
+}
+
+.customLabel {
+  margin-right: 10px;
+}
+
+.qntBtn {
+  border: none;
+  border-radius: 10px;
+}

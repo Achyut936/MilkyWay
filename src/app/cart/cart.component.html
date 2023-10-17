@@ -1,0 +1,58 @@
+<div class="container">
+  <h1 class="text-center">Your Shopping Cart</h1>
+  <div *ngIf="getCart">
+    <table class="table text-center mt-5">
+      <thead>
+        <tr>
+          <th class="col">Product</th>
+          <th class="col">Price</th>
+          <th class="col">Quantity</th>
+          <th class="col">Total</th>
+          <th class="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cart of getCart" class="customCartRow">
+          <td class="align-middle">
+            <img
+              class="productImg"
+              src="{{ cart.img }}"
+              alt="{{ cart.product }}"
+            />
+          </td>
+          <td class="align-middle">₹ {{ cart.price }}</td>
+          <td class="align-middle">
+            <button class="qntBtn" (click)="decrementQuantity(cart)">
+              <i class="fa fa-minus"></i>
+            </button>
+            <span class="mx-2">{{ cart.qnt }}</span>
+            <button class="qntBtn" (click)="incrementQuantity(cart)">
+              <i class="fa fa-plus"></i>
+            </button>
+          </td>
+          <td class="align-middle">₹ {{ cart.price * cart.qnt | number }}</td>
+          <td class="align-middle">
+            <button
+              class="btn btn-danger"
+              (click)="removeSingle(cart.productId)"
+            >
+              Remove <i class="fa-solid fa-trash-can ml-2"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="text-end">
+    <h4>Total: ₹ {{ total }}</h4>
+    <button (click)="clearCart()" class="btn btn-danger customClear">
+      Clear Cart <i class="fa-solid fa-trash-can"></i>
+    </button>
+    <button class="btn btn-primary" [routerLink]="['/checkout']">
+      Checkout
+    </button>
+  </div>
+</div>
+
+<app-footer></app-footer>

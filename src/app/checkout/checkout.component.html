@@ -1,0 +1,17 @@
+<div class="checkout upperMargin">
+  <div class="container text-center">
+    <h1 class="mt-5 text-dark">Checkout Page</h1>
+    <h3 class="mt-3 text-secondary">Please do not refresh the page</h3>
+    <h3 class="mt-2 text-secondary">Transaction is in progress</h3>
+    <h4 class="mt-2 text-primary">Total Bill: {{ calculateTotalBill() }}</h4>
+
+    <div class="payment-details mt-5">
+      <h4 class="text-dark">Payment Details:</h4>
+
+      <div #paymentRef class="payment-content"></div>
+    </div>
+    <button class="btn btn-danger mt-4" [routerLink]="['/cart']">
+      Cancel Transaction
+    </button>
+  </div>
+</div>

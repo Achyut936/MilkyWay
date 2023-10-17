@@ -1,0 +1,196 @@
+<div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img
+        src="assets/images/cow2.jpg"
+        class="d-block w-100 customImages"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block customCaption">
+        <h3>Welcome To Our Pure Dairy Farm</h3>
+        <p>
+          Our dairy products are sourced from organic farms that prioritize the
+          well-being of their animals and the environment.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img
+        src="assets/images/cow3.jpg"
+        class="d-block w-100 customImages"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block customCaption">
+        <h3>What Makes Our Dairy Special?</h3>
+        <p>
+          Organic dairy products are richer in essential nutrients like Omega-3
+          fatty acids and antioxidants.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img
+        src="assets/images/cow2.jpg"
+        class="d-block w-100 customImages"
+        style
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block customCaption">
+        <h3>Why Choose Us?</h3>
+        <p>
+          We rigorously test and ensure the highest quality standards for all
+          our products.
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleFade"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleFade"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card customCard">
+        <img
+          src="assets/images/freedelivery.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Free Home Delivery</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card customCard">
+        <img
+          src="assets/images/customersatisfaction.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Customer Satisfaction</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card customCard">
+        <img
+          src="assets/images/onlinesupport.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">24/7 Customer Support</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card customCard">
+        <img src="assets/images/ontime.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">On Time Deliveries</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card customCard">
+        <img
+          src="assets/images/valueformoney.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Value For Money</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col text-center mx-auto">
+      
+      <img class="customFeaturedimg" src="assets/images/featured2.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <ng-container *ngFor="let product of productArr">
+      
+      <div class="col" *ngIf="product.cat === 'milk'">
+        <div class="card customFeature">
+          
+          <div class="customImg">
+            <img
+              src="{{ product.img }}"
+              class="card-img-top"
+              alt="Product Image"
+            />
+          </div>
+          <hr />
+          
+          <div class="card-body">
+            <h5 class="card-title">{{ product.product }}</h5>
+            <div class="price-box">
+              <p class="card-text customPrice">Price:</p>
+              <span class="price-amount">{{ product.price }}</span>
+            </div>
+            <div class="quantity-container">
+              <label for="quantity" class="customLabel">Quantity </label>
+              
+              <button class="qntBtn" (click)="decQnt(product)"><i class="fa fa-minus"></i></button>
+              <span class="mx-2">{{product.qnt}}</span>
+
+              <button  class="qntBtn" (click)="incQnt(product)"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="button-container">
+              <button
+                class="btn btn-primary btn-sm"
+                type="button"
+                id="add-to-cart" (click)="addToCart(product)"
+              >
+                Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+              <button
+                class="btn btn-secondary btn-sm"
+                type="button"
+                id="save-for-later" (click)="saveForLater(product)"
+              >
+                <i class="fas fa-bookmark"></i>
+                
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <br/>
+  <br/>
+</div>
+
+<app-footer></app-footer>
+
+
+    
