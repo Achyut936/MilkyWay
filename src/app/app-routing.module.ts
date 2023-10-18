@@ -10,15 +10,15 @@ import { WishListComponent } from './wish-list/wish-list.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
-  { path: '/header', component: HeaderComponent },
-  { path: '/', redirectTo: 'Home', pathMatch: 'full' },
-  { path: '/Home', component: MainPageComponent },
-  { path: '/aboutUs', component: AboutUsComponent },
-  { path: '/products', component: ProductsComponent },
-  { path: '/cart', component: CartComponent },
-  { path: '/f', component: FooterComponent },
-  { path: '/wishlist', component: WishListComponent },
-  { path: '/checkout', component: CheckoutComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'Home', component: MainPageComponent },
+  { path: 'aboutUs', component: AboutUsComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'f', component: FooterComponent },
+  { path: 'wishlist', component: WishListComponent },
+  { path: 'checkout', component: CheckoutComponent },
 ];
 
 @NgModule({
