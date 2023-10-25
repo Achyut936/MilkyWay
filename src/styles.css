@@ -3,3 +3,28 @@
     border: 1px solid white !important; /* Set the border to white */
     border-radius:5px ;
   }
+  /* Default styles for all devices */
+.my-element {
+  /* Your default styles here */
+}
+
+/* Media query for screens with a maximum width of 768px (tablet portrait) */
+@media screen and (max-width: 768px) {
+  .my-element {
+    /* Adjust styles for screens up to 768px wide */
+  }
+}
+
+/* Media query for screens with a maximum width of 992px (tablet landscape) */
+@media screen and (max-width: 992px) {
+  .my-element {
+    /* Adjust styles for screens up to 992px wide */
+  }
+}
+
+/* Media query for screens with a maximum width of 1200px (desktop) */
+@media screen and (max-width: 1200px) {
+  .my-element {
+    /* Adjust styles for screens up to 1200px wide */
+  }
+}
