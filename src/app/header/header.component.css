@@ -1,43 +1,45 @@
-.customName{
-    font-family: Arial, sans-serif; /* Choose your preferred font */
-    font-size: 24px; /* Adjust the font size as needed */
-    font-weight: bold; /* You can adjust the font weight */
-    color: white; /* Choose your preferred text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Apply the curved text-shadow effect */
-    /* Add any additional styles you want */
-}
-.customCart{
-    color: white;
-}
-.custom-hamburger .navbar-toggler-icon {
-    color: white;
-  }
-.customNav{
-    background-color:#212529!important;
+.customName {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-.customRightAlign{
-    margin-left: 78rem
+.customCart {
+  color: white;
 }
+
+.customNav {
+  background-color: #212529 !important;
+}
+
+.customRightAlign {
+  margin-left: 1rem; /* Adjust the margin as needed for responsiveness */
+}
+
 /* CSS to position the cart item count above the cart icon */
 .cartIcon {
-    position: relative;
-    display: inline-block;
-    margin-top: 5px;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.cartValue {
+  position: absolute;
+  top: -16px;
+  right: -22px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .customRightAlign {
+      margin-left: 0; /* Remove the margin for smaller screens */
   }
-  .navbar-toggler-icon{
-    color: white;
-  }
-  .cartValue {
-    position: absolute;
-    top: -16px;
-    right: -22px;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 12px;
-  }
-  
+}

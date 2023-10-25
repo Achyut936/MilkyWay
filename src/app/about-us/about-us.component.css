@@ -1,6 +1,4 @@
-body,
-h1,
-p {
+body, h1, p {
   margin: 0;
   padding: 0;
 }
@@ -44,4 +42,55 @@ p {
 .content {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
+}
+
+/* Media query for screens with a maximum width of 1200px (large desktop) */
+@media screen and (max-width: 1200px) {
+  .parallax {
+    height: 80vh; /* Adjust height for screens up to 1200px wide */
+  }
+}
+
+/* Media query for screens with a maximum width of 768px (tablet portrait) */
+@media screen and (max-width: 768px) {
+  .parallax {
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+
+  .customHeight {
+    height: 200px !important; /* Adjust height for smaller screens */
+  }
+
+  .customCard {
+    width: 100%; /* Adjust card width for smaller screens */
+  }
+  
+  .customCardMargins {
+    margin-left: 0 !important; /* Remove left margin for smaller screens */
+    margin-bottom: 10px !important; /* Adjust bottom margin for smaller screens */
+  }
+
+  .card1 {
+    right: 0;
+    bottom: 0;
+  }
+
+  .customAbout {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for screens with a maximum width of 576px (mobile) */
+@media screen and (max-width: 576px) {
+  .parallax {
+    height: 40vh; /* Further adjust height for mobile screens */
+  }
+
+  .customHeight {
+    height: 150px !important; /* Adjust height for smaller screens */
+  }
+
+  .customAbout {
+    font-size: 16px; /* Further adjust font size for mobile screens */
+  }
 }

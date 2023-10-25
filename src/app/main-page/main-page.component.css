@@ -1,3 +1,4 @@
+/* Default styles for all devices */
 .customCaption {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -14,10 +15,17 @@
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
   margin: 15px 0;
   position: relative;
-  height: 430px; /* Adjusted height value */
+  height: 430px; /* Default height */
+
+  /* Media query for screens with a maximum width of 768px (tablet portrait) */
+  @media screen and (max-width: 768px) {
+    width: 100%; /* Adjust width for smaller screens */
+    min-width: auto;
+    height: auto;
+  }
 }
 
-.customImg {
+.customImg img {
   height: 215px !important;
 }
 
@@ -30,6 +38,13 @@
   border-radius: 25px;
   margin: 15px 1pc; /* Removed duplicated margin property */
   height: 220px;
+
+  /* Media query for screens with a maximum width of 768px (tablet portrait) */
+  @media screen and (max-width: 768px) {
+    width: 100%; /* Adjust width for smaller screens */
+    min-width: auto;
+    height: auto;
+  }
 }
 
 .customFeaturedimg {

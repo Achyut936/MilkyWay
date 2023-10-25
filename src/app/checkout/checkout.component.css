@@ -1,13 +1,19 @@
 .upperMargin {
   margin-top: 80px;
 }
+
 .payment-content {
   margin-top: 30px;
-  margin-left: 173px;
+  margin-left: 16rem;
 }
 
-.payment-content {
-  margin-top: 30px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .upperMargin {
+      margin-top: 40px;
+  }
 
-  margin-left: 270px;
+  .payment-content {
+      margin-left: 20px; /* Adjust this value as needed for responsiveness */
+  }
 }
