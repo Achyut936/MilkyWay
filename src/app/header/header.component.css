@@ -15,7 +15,7 @@
 }
 
 .customRightAlign {
-  margin-left: 1rem; /* Adjust the margin as needed for responsiveness */
+  margin-left: 1rem; /* Adjust the margin as needed for larger screens */
 }
 
 /* CSS to position the cart item count above the cart icon */
@@ -40,6 +40,6 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .customRightAlign {
-      margin-left: 0; /* Remove the margin for smaller screens */
+    margin-left: 0; /* Remove the margin for smaller screens */
   }
 }
