@@ -13,7 +13,7 @@ export class HeaderComponent {
   cartCount() {
     const cartData = JSON.parse(localStorage.getItem('localCart') ?? 'null');
 
-    if (cartData !== 'null') {
+    if (cartData !== null) {
       var count = cartData.length;
       return count;
     } else {
