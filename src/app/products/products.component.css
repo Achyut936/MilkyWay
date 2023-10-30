@@ -1,23 +1,23 @@
 .customFeature {
-  width: 100%; /* Full width on smaller screens */
-  padding: 10px;
+  width: 170px;
+  min-width: 250px;
+  padding: 10px 12px;
   border: 1px solid #cce7d0;
   border-radius: 25px;
   cursor: pointer;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  margin: 10px 0; /* Reduced margin for smaller screens */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+  margin: 15px 0;
   position: relative;
-  height: auto; /* Adjusted height for responsiveness */
+  height: 430px;
 }
 
 .customImg {
-  width: 100%; /* Full width for product images on smaller screens */
-  height: auto; /* Allow images to scale proportionally */
+  height: 215px !important;
 }
 
 .button-container {
   display: flex;
-  flex-direction: column; /* Stacked buttons for smaller screens */
+  justify-content: space-between;
   margin-top: 10px;
 }
 
@@ -25,7 +25,7 @@
   background-color: #f0f0f0;
   padding: 5px 10px;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-left: 10px;
 }
 
 hr {
@@ -35,11 +35,11 @@ hr {
 }
 
 .customMarginTop {
-  margin-top: 20px; /* Adjusted margin for responsiveness */
+  margin-top: 60px;
 }
 
 .customCategories {
-  font-size: 18px; /* Reduced font size for responsiveness */
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -50,26 +50,26 @@ hr {
 
 .customProductImg {
   width: 100%;
-  height: auto; /* Allow images to scale proportionally */
-  border-radius: 10px;
+  border-radius: 25px;
   margin-top: 10px;
+  height: 250px !important;
 }
 
 .customCategoryImg {
   width: 100%;
-  height: auto; /* Allow images to scale proportionally */
-  border-radius: 10px;
+  border-radius: 25px;
   margin-top: 10px;
+  height: 270px !important;
   background-color: #407fb4;
 }
 
 .customScroll {
-  max-width: 100%; /* Ensure the images fit within their containers */
-  height: auto;
+  height: 150px;
+  border-radius: 75px;
 }
 
 .upperMargin {
-  margin-top: 20px; /* Adjusted margin for responsiveness */
+  margin-top: 80px;
 }
 
 .customSearch {
@@ -85,24 +85,23 @@ hr {
 }
 
 .customCard {
-  width: 100%; /* Full width for smaller screens */
+  width: 170px;
   text-align: center;
   padding: 18px 15px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
   border: 1px solid #cce7d0;
   border-radius: 25px;
-  margin: 10px 0; /* Reduced margin for smaller screens */
-  height: auto; /* Adjusted height for responsiveness */
+  margin: 15px 1pc; 
+  height: 220px;
 }
 
 .customFeaturedimg {
-  width: 100%; /* Full width for smaller screens */
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 16px;
 }
 
 .price-box {
   display: flex;
-  flex-direction: column; /* Stacked elements for smaller screens */
   align-items: center;
   margin-top: 10px;
 }
@@ -119,25 +118,4 @@ hr {
 .qntBtn {
   border: none;
   border-radius: 10px;
-}
-
-/* Responsive Styles */
-@media (min-width: 768px) {
-  .customFeature {
-      width: 25%; /* Adjusted width for larger screens (4 items per row) */
-      margin: 1%; /* Added spacing between items for larger screens */
-  }
-  .customMarginTop {
-      margin-top: 60px; /* Reset margin for larger screens */
-  }
-  .button-container {
-      flex-direction: row; /* Buttons side by side for larger screens */
-  }
-  .customCategories {
-      font-size: 24px; /* Restore font size for larger screens */
-  }
-  .customCard {
-      width: 22%; /* Adjusted width for larger screens (4 items per row) */
-      margin: 1%; /* Added spacing between items for larger screens */
-  }
 }
